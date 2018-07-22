@@ -283,7 +283,7 @@ function copyLink() {
 }
 
 function saveLink() {
-  var url = "/" + location.hash;
+  var url = "/i/" + location.hash;
   window.history.pushState(null, null, url);
   location.reload();
 }
