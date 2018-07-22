@@ -268,7 +268,12 @@ function copyThenLink() {
   return confirm("Copied your link to the clipboard. Paste it to share.");
 }
 function copyLink() {
-  var text = location.href;
+  document.getElementById("ss").href = location.href;
+  $('#ss').shortify({
+    service: 'googl',
+    apikey: 'AIzaSyCPYjwoXEGBFjH7Ew79zLQr7zdABL_Meww' // optional
+  });
+  var text = document.getElementById("ss").href;
   var dummy = document.createElement("input");
   document.body.appendChild(dummy);
   dummy.value = text;
