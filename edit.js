@@ -229,9 +229,9 @@ var maxLengths = {
 function updateLink(url, title, push) {
   if (title) title = encodeURIComponent(title.trim().replace(/\s/g, "_"));
   if (url.length) {
-    url = "/#" + (title || "") + "/" + url;
+    url = "/i/#" + (title || "") + "/" + url;
   } else {
-    url = "/edit";
+    url = "/i/edit";
   }
   var hash = location.hash;
   if (push || !hash || !hash.length) {
